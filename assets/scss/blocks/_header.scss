@@ -1,0 +1,136 @@
+.main__wrapper {
+    max-width: 1480px;
+    display: flex;
+    position: relative;
+}
+.header {
+}
+.header__container {
+    padding: 0;
+}
+.header__top {
+    padding: 10px 80px;
+    display: flex;
+    align-items: center;
+}
+.article {
+    flex-grow: 1;
+}
+.header__bottom {
+    display: block;
+    padding: 0 110px;
+    padding-top: 690px;
+    background-color: rgb(87, 84, 84);
+    background-image: url(../media/header-bgi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header__bottom-btn {
+    padding: 18px 20px;
+    background-color: $color-secondary;
+    color: #fff;
+    display: inline-block;
+    
+}
+.header__bottom-btn-text {
+    font-weight: 700;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    &::after {
+        content: url(../media/Chevron-Right.svg);
+        width: 14px;
+        height: 14px;
+        display: block;
+    }
+}
+.header__toggler {
+    display: none;
+    &:checked ~ .sitenav {
+        padding: 20px 0;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        display: block;
+        background-color: #fff;
+        .sitenav__list {
+            flex-direction: column;
+            .presentation {
+                margin: 0;
+            }
+        } 
+    }
+    &:checked ~ .toggler {
+        margin-top: 10px;
+        display: inline-block;
+        .toggler__center {
+            display: none;
+        }
+        .toggler__top {
+            margin-bottom: 0;
+            transform: rotate(45deg);
+        }
+        .toggler__bottom {
+            margin-top: -2px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+.header__toggler-label {
+    width: 25px;
+    height: 24px;
+    display: none;
+
+}
+.toggler {
+}
+.toggler__line {
+    width: 25px;
+    height: 2px;
+    background-color: $color-primary;
+    display: block;
+    transition: all 0.4s;
+}
+.toggler__top {
+    margin-bottom: 6px;
+}
+.toggler__center {
+    margin-bottom: 6px;
+}
+.toggler__bottom {
+}
+@include breakpoint-down(780px) {
+    .header__top {
+        padding: 10px 30px;
+    }
+    .header__bottom {
+        padding: 0 50px;
+        padding-top: 400px;
+    }
+}
+@include breakpoint-down(500px) {
+    .header__toggler-label {
+        display: block;
+    }
+    .header__top {
+        justify-content: end;
+        padding: 10px;
+        font-size: 10px;
+    }
+    .header__bottom {
+        padding: 0 30px;
+        padding-top: 280px;
+    }
+    .header__bottom-btn {
+        padding: 14px 16px;
+    }
+    .header__bottom-btn-text {
+        gap: 20px;
+    }
+    .article {
+        padding: 0;
+    }
+}

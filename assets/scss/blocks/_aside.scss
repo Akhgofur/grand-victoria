@@ -1,0 +1,87 @@
+.aside {
+    max-width: 260px;
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px 10px 0;
+}
+.aside__logo {
+    align-self: center;
+    margin-bottom: 48px;
+}
+.logo {
+    width: 172px;
+    height: 117px;
+}
+.aside__dropdown {
+}
+.sales__section {
+}
+.sales__section-heading {
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 17px;
+    margin-bottom: 13px;
+}
+.sales__section-address {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 9px;
+    &::before {
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: $color-secondary;
+        content: url(../media/location.svg);
+        padding: 2px;
+    }
+
+}
+.sales__section-num {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 9px;
+    &::before {
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: $color-secondary;
+        content: url(../media/phone.svg);
+        padding: 2px;
+    }
+}
+.aside__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-secondary;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.aside__insta-logo-link {
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 5px;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+}
+.aside__insta-logo {
+    width: 24px;
+    height: 24px;
+}
+@include breakpoint-down(1000px) {
+    .aside {
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+.dropdown {
+    margin-bottom: 37px;
+}
+.dropdown__heading {
+    margin-bottom: 12px;
+    color:  $color-secondary;
+    display: flex;
+    gap: 10px;
+    &::before {
+        display: block;
+        width: 10px;
+        height: 9px;
+        content: url(../media/heading-logo.svg);
+    }
+}
+.dropdown__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 18px;
+}
+.dropdown__item {
+}
+.dropdown__link {
+}

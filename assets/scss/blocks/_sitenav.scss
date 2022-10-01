@@ -1,0 +1,27 @@
+
+.sitenav {
+    font-size: 1.6em;
+}
+.sitenav__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.sitenav__item {
+}
+.sitenav__link {
+}
+.presentation {
+    margin-left: auto;
+}
+
+@include breakpoint-down(780px) {
+    .sitenav__list {
+        gap: 20px;
+    }
+}
+@include breakpoint-down(500px) {
+    .sitenav {
+        display: none;
+    }
+}
